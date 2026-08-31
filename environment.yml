@@ -1,0 +1,22 @@
+name: monorespytorch
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - numpy
+  - mrcfile
+  # CPU-only PyTorch build. If you have an NVIDIA GPU and want CUDA support,
+  # comment out the two lines below and instead uncomment ONE of the
+  # "GPU option" blocks further down (matching your installed CUDA driver).
+  - pytorch
+  - cpuonly
+
+  # --- GPU option (CUDA 12.1), NVIDIA driver >= 530 -------------------------
+  # - pytorch
+  # - pytorch-cuda=12.1
+
+  # --- GPU option (CUDA 11.8), older NVIDIA driver --------------------------
+  # - pytorch
+  # - pytorch-cuda=11.8
