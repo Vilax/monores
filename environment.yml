@@ -1,4 +1,4 @@
-name: monorespytorch
+name: monores
 channels:
   - pytorch
   - conda-forge
