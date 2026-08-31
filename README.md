@@ -72,10 +72,6 @@ This is upstream behaviour, faithfully reproduced:
 * The sweep starts at `resolution = maxRes` and **decreases** by `--step` until
   it drops below Nyquist. `--maxRes` is therefore the *low-frequency* start of
   the range, despite its name.
-* With the stock default `--maxRes 1` the first candidate frequency
-  (`sampling/1`) aliases onto the DC bin, `resolution` becomes `+inf`, and the
-  resulting map is garbage. The port prints a loud warning when
-  `maxRes <= 2*sampling_rate`; pass something like `--maxRes 15` ... `--maxRes 30`.
 
 ## Outputs
 
